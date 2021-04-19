@@ -24,7 +24,7 @@ body {
 
 /* --- --- --- */
 
-body {
+#body_wrapper {
     width: 100%;
     height: 100vh;
     background-color: lightgray;
@@ -36,24 +36,142 @@ body {
 }
 
 #nav {
-    width: 180px;
+    width: 230px;
     background-color: black;
 }
 
 #content {
-    width: calc(100% - 180px);
+    width: calc(100% - 230px);
     overflow-y: scroll;
     background-color: lightpink;
 }
 
 #upgrade {
-    height: 100px;
+    height: 90px;
     width: 100%;
     background-color: rgb(0, 0, 0, 0.5);
     position: fixed;
 }
 
+/* menu */
+#content_menu {
+    margin-top: 90px;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.content_menu_item {
+    margin: 15px 10px;
+}
+.content_menu_item a {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: blanchedalmond;
+}
+
+/* recently played */
+#recently_played {
+    margin: 30px 15px;
+}
+
+#recently_played_container {
+    display: flex;
+    text-align: center;
+}
+
+.recently_played_item {
+    flex-basis: calc(100% / 6);
+    padding-right: 15px;
+}
+
+.recently_played_image_container {
+}
+
+.recently_played_image_container img {
+    width: 100%;
+}
+
+/* create for */
+#create_for {
+    margin: 30px 15px;
+}
+
+#create_for_container {
+    display: flex;
+}
+
+.create_for_item {
+    flex-basis: calc(100% / 6);
+    padding-right: 15px;
+}
+
+.create_for_image_container img {
+    width: 100%;
+}
+/* most popular */
+#most_pupular {
+    margin: 30px 15px;
+}
+
+#most_popular_container {
+    display: flex;
+}
+.most_popular_item {
+    flex-basis: calc(100% / 6);
+    padding-right: 15px;
+}
+
+.most_popular_image_container img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* footer */
 footer {
     height: 90px;
     background-color: gray;
+}
+
+/* media query */
+@media screen and (max-width: 992px) {
+    
+    #recently_played_container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .recently_played_item {
+        flex-basis: 25%;
+    }
+    .create_for_item {
+        flex-basis: 25%;
+    }
+    .most_popular_item {
+        flex-basis: 25%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .recently_played_item {
+        flex-basis: 50%;
+    }
+    .create_for_item {
+        flex-basis: 50%;
+    }
+    .most_popular_item {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    
+    /* nav */
+    #nav {
+        width: 50px;
+    }
+    #content {
+        width: calc(100% - 50px);
+    }
 }
