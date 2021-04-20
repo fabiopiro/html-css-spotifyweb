@@ -16,18 +16,68 @@
     <body>
         <!-- body wrapper -->
         <div id="body_wrapper">
-            <!-- HEADER -->
-            <header>
-    
-            </header>
-            <!-- /HEADER -->
             <!-- MAIN -->
             <main>
                 <!-- main wrapper -->
                 <div id="main_wrapper">
-                    <div id="nav">
-
-                    </div>
+                    <nav id="main_nav">
+                        <div id="nav_top">
+                            <div id="nav_logo">
+                                <img src="img/logo.svg" alt="">
+                            </div>
+                            <div id="nav_menu">
+                                <div class="nav_menu_item">
+                                    <a href="">
+                                        <img src="img/home.svg" alt="">
+                                        <span>Home</span>
+                                    </a>
+                                </div>
+                                <div class="nav_menu_item">
+                                    <a href="">
+                                        <img src="img/search.svg" alt="">
+                                        <span>Cerca</span>
+                                    </a>
+                                </div>
+                                <div class="nav_menu_item">
+                                    <a href="">
+                                        <img src="img/libreria.svg" alt="">
+                                        <span>La tua libreria</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="nav_playlist">
+                                <span>playlist</span>
+                                <div id="create_playlist">
+                                    <a href="">
+                                        <div id="create_playlist_icon">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <span>Crea Playlist</span>
+                                    </a>
+                                </div>
+                                <ul class="playlist_list">
+                                    <li>Nome Playlist</li>
+                                    <li>Nome Playlist</li>
+                                    <li>Nome Playlist</li>
+                                    <li>Nome Playlist</li>
+                                    <li>Nome Playlist</li>
+                                    <li>Nome Playlist</li>
+                                    <li>Nome Playlist</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="nav_bottom">
+                            <div id="download">
+                                <img src="img/download.svg" alt="">
+                                <span>Installa App</span>
+                            </div>
+                            <hr>
+                            <div id="account">
+                                <img src="img/profile.svg" alt="">
+                                <span>John Doe</span>
+                            </div>
+                        </div>
+                    </nav>
                     <div id="content">
                         <div id="upgrade">
                             <a class="btn_upgrade" href="">effettua l'upgrade</a>
@@ -184,7 +234,7 @@
                             </div>
                             <div id="song_title_and_artist">
                                 <span>Sinister</span>
-                                <span>Subtitle</span>
+                                <span>Brano Nome</span>
                             </div>
                         </div>
                         <div id="song_like_and_save">
@@ -202,19 +252,15 @@
                         </div>
                         <div id="controls_bar">
                             <span>0:25</span>
-                            <div class="bar_center"></div>
+                            <div class="bar_center">
+                                <div class="bar_center_overlay">
+                                    <div class="bar_center_circle"></div>
+                                </div>
+                            </div>
                             <span>4:25</span>
                         </div>
                     </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <div id="right">
+                    <div id="music_player_right">
                         <i class="fas fa-list-ul"></i>
                         <i class="fas fa-desktop"></i>
                         <i class="fas fa-volume-up"></i>
