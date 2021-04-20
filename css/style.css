@@ -52,18 +52,6 @@ body {
     display: flex;
 }
 /* nav */
-#main_nav {
-    width: 230px;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: gray;
-}
-
 /* nav shrinked */
 #nav_shrinked {
     width: 50px;
@@ -93,11 +81,22 @@ body {
 }
 /* /nav shrinked */
 
+#main_nav {
+    width: 230px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: gray;
+}
+
 #nav_logo {
     display: flex;
     height: 90px;
 }
-
 #nav_logo img {
     width: 65%;
 }
@@ -108,8 +107,8 @@ body {
 
 .nav_menu_item {
     padding-bottom: 10px;
+    position: relative;
 }
-
 .nav_menu_item a {
     display: flex;
     align-items: center;
@@ -169,13 +168,17 @@ body {
     list-style: none;
     font-size: 12px;
     font-weight: 700;
-    overflow-y: scroll;
 }
 .playlist_list li {
     padding-bottom: 20px;
 }
+/* nav center */
+#nav_center {
+    overflow-y: auto;
+}
 /* nav bottom */
 #nav_bottom {
+    margin-top: auto;
     width: 100%;
     font-weight: 700;
 }
@@ -223,6 +226,7 @@ body {
     width: calc(100% - 230px);
     background-color: rgb(0, 0, 0, 0.5);
     position: fixed;
+    z-index: 10;
 }
 .btn_upgrade {
     font-size: 12px;
@@ -253,12 +257,32 @@ body {
 }
 .content_menu_item {
     margin: 18px 12px;
+    position: relative;
 }
 .content_menu_item a {
     font-size: 13px;
     color: gray;
     text-transform: uppercase;
     font-weight: 700;
+}
+
+.green_bar_x {
+    display: inline-block;
+    background-color: lime;
+    width: 35px;
+    height: 2px;
+    position: absolute;
+    top: 120%;
+    left: 30%;
+}
+.green_bar_y {
+    display: inline-block;
+    background-color: lime;
+    width: 2px;
+    height: 35px;
+    position: absolute;
+    top: -8%;
+    left: -10%;
 }
 
 #recently_played,
@@ -283,9 +307,6 @@ body {
     padding-bottom: 15px;
 }
 
-/* .item_image_container {
-    position: relative;
-} */
 .item_image_overlay {
     position: relative;
 }
