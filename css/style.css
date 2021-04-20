@@ -34,139 +34,252 @@ body {
     height: calc(100vh - 90px);
     display: flex;
 }
-
+/* nav */
 #nav {
     width: 230px;
     background-color: black;
+    padding-left: 20px;
+    overflow-y: hidden;
 }
 
+/* content */
 #content {
     width: calc(100% - 230px);
     overflow-y: scroll;
-    background-color: lightpink;
+    background-color: #141922;
 }
-
+/* upgrade */
 #upgrade {
     height: 90px;
-    width: 100%;
+    width: calc(100% - 230px);
     background-color: rgb(0, 0, 0, 0.5);
     position: fixed;
+}
+
+.btn_upgrade {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 12px 40px;
+    border: 1px solid white;
+    border-radius: 30px;
+    margin-right: 20px;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate( 0 , -50%);
 }
 
 /* menu */
 #content_menu {
     margin-top: 90px;
-    background-color: burlywood;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 .content_menu_item {
-    margin: 15px 10px;
+    margin: 18px 12px;
 }
 .content_menu_item a {
     font-size: 13px;
+    color: gray;
     text-transform: uppercase;
     font-weight: 700;
-    background-color: blanchedalmond;
 }
 
-/* recently played */
-#recently_played {
-    margin: 30px 15px;
+#recently_played,
+#create_for,
+#most_popular {
+    margin: 30px 20px;
 }
 
-#recently_played_container {
+#most_popular img {
+    border-radius: 50%;
+}
+
+/* section */
+.section_container {
     display: flex;
     text-align: center;
 }
 
-.recently_played_item {
+.section_item {
     flex-basis: calc(100% / 6);
     padding-right: 15px;
+    padding-bottom: 15px;
 }
 
-.recently_played_image_container {
+.item_image_container {
 }
 
-.recently_played_image_container img {
+.item_image_container img {
     width: 100%;
 }
 
-/* create for */
-#create_for {
-    margin: 30px 15px;
+/* section title */
+.section_title {
+    margin-bottom: 30px;
+}
+.section_title h2 {
+    margin-bottom: 12px;
+    color: white;
+}
+.section_title p {
+    font-size: 12px;
+    font-weight: 700;
+    color: gray;
+}
+/* item title */
+.item_title p:first-child {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: white;
+}
+.item_title p {
+    font-size: 12px;
+    font-weight: 700;
+    color: gray;
 }
 
-#create_for_container {
-    display: flex;
-}
 
-.create_for_item {
-    flex-basis: calc(100% / 6);
-    padding-right: 15px;
-}
 
-.create_for_image_container img {
-    width: 100%;
-}
-/* most popular */
-#most_pupular {
-    margin: 30px 15px;
-}
 
-#most_popular_container {
-    display: flex;
-}
-.most_popular_item {
-    flex-basis: calc(100% / 6);
-    padding-right: 15px;
-}
 
-.most_popular_image_container img {
-    width: 100%;
-    border-radius: 50%;
-}
 
+
+
+
+
+#music_player_left,
+#music_player_center,
+#right {
+    background-color: thistle;
+}
 /* footer */
-footer {
+#music_player {
     height: 90px;
-    background-color: gray;
+    background-color: #282828;
+    display: flex;
+    justify-content: space-between;
 }
+
+#music_player_left {
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#song {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+#song_img {
+    height: 50px;
+    width: 50px;
+}
+#song_img img {
+    height: 100%;
+}
+#song_title_and_artist span {
+    display: block;
+    padding-left: 10px;
+}
+
+#song_like_and_save i{
+    padding: 5px;
+}
+
+/* kkdiekiekiek */
+
+#music_player_center {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#controls {
+    display: flex;
+    align-items: center;
+}
+#controls i {
+    padding: 0 12px;
+}
+
+#controls_bar {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar_center {
+    display: inline-block;
+    width: 75%;
+    height: 5px;
+    background-color: tomato;
+}
+#controls_bar span {
+    padding: 0 15px;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+/* uejduejduejudje */
+#right {
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#right i {
+    padding: 5px;
+}
+
+.bar {
+    display: inline-block;
+    width: 60%;
+    height: 5px;
+    background-color: tomato;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* media query */
 @media screen and (max-width: 992px) {
-    
-    #recently_played_container {
+
+    .section_container {
         flex-wrap: wrap;
-        justify-content: flex-start;
     }
-    .recently_played_item {
-        flex-basis: 25%;
-    }
-    .create_for_item {
-        flex-basis: 25%;
-    }
-    .most_popular_item {
+    .section_item {
         flex-basis: 25%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    
-    .recently_played_item {
-        flex-basis: 50%;
-    }
-    .create_for_item {
-        flex-basis: 50%;
-    }
-    .most_popular_item {
+
+    .section_item {
         flex-basis: 50%;
     }
 }
 
 @media screen and (max-width: 576px) {
-    
     /* nav */
     #nav {
         width: 50px;
@@ -174,4 +287,6 @@ footer {
     #content {
         width: calc(100% - 50px);
     }
+    #upgrade {
+        width: calc(100% - 50px);
 }
