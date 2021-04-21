@@ -5,17 +5,14 @@
     margin: 0;
     padding: 0;
 }
-
 /* font */
 body {
     font-family: 'Montserrat', sans-serif;
 }
 /* hover */
-.nav_menu_item a:hover,
 #create_playlist:hover a,
 .playlist_list li:hover,
 #nav_bottom #download:hover span,
-#content_menu a:hover,
 #song_title_and_artist span:hover,
 #song_like_and_save a i:hover {
     color: white;
@@ -88,9 +85,15 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
     color: gray;
+}
+#nav_logo,
+#nav_center,
+#nav_playlist,
+#nav_bottom {
+    padding: 0 20px;
 }
 
 #nav_logo {
@@ -100,16 +103,17 @@ body {
 #nav_logo img {
     width: 65%;
 }
-
+/* nav menu */
 #nav_menu {
     margin-bottom: 15px;
 }
 
-.nav_menu_item {
-    padding-bottom: 10px;
+#nav_menu_list li {
+    list-style: none;
+    padding: 5px 20px;
     position: relative;
 }
-.nav_menu_item a {
+#nav_menu_list a {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -117,13 +121,34 @@ body {
     font-weight: 700;
     color: gray;
 }
-.nav_menu_item img {
+#nav_menu_list img {
     height: 25px;
+    opacity: 0.8;
 }
-.nav_menu_item span {
+#nav_menu_list span {
     padding-left: 8px;
 }
 
+#nav_menu_list li:nth-child(1) a,
+#nav_menu_list li:hover a {
+    color: white;
+}
+#nav_menu_list li:nth-child(1) img,
+#nav_menu_list li:hover img {
+    opacity: 1.0;
+}
+#nav_menu_list li:nth-child(1)::before,
+#nav_menu_list li:hover::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 3px; 
+    transform: translate(-50% , -50%);
+    height: 10px;
+    height: 100%;
+    border-left: 3px solid lime;
+}
+/* /nav menu */
 /* playlist */
 #nav_playlist span:first-child {
     display: block;
@@ -227,6 +252,9 @@ body {
     background-color: rgb(0, 0, 0, 0.5);
     position: fixed;
     z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .btn_upgrade {
     font-size: 12px;
@@ -237,54 +265,52 @@ body {
     border: 1px solid white;
     border-radius: 30px;
     margin-right: 20px;
-
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate( 0% , -50%);
+    /* ???bug grafico col transition??? */
+    /* transition: 0.3s;  */
 }
 .btn_upgrade:hover {
-    font-size: 14px;
-    padding: 14px 45px;
+    transform: scale(1.1);
 }
 
 /* menu */
 #content_menu {
     margin-top: 90px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align: center;
 }
-.content_menu_item {
+
+#content_menu_list li{
+    display: inline-block;
+    list-style: none;
     margin: 18px 12px;
     position: relative;
 }
-.content_menu_item a {
+#content_menu_list a {
     font-size: 13px;
     color: gray;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-.green_bar_x {
-    display: inline-block;
-    background-color: lime;
-    width: 35px;
-    height: 2px;
+#content_menu_list li:nth-child(1)::after,
+#content_menu_list li:hover::after {
+    content: "";
     position: absolute;
-    top: 120%;
-    left: 30%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    height: 10px;
+    width: 50%;
+    border-bottom: 3px solid lime;
 }
-.green_bar_y {
-    display: inline-block;
-    background-color: lime;
-    width: 2px;
-    height: 35px;
-    position: absolute;
-    top: -8%;
-    left: -10%;
+#content_menu_list li:hover {
+    cursor: pointer;
+}
+#content_menu_list li:nth-child(1) a,
+#content_menu_list li:hover a {
+    color: white;
 }
 
+/* contet sections */
 #recently_played,
 #create_for,
 #most_popular {
@@ -477,6 +503,7 @@ body {
 }
 
 /* media query */
+/* 992px */
 @media screen and (max-width: 992px) {
 
     .section_container {
@@ -486,35 +513,42 @@ body {
         flex-basis: 25%;
     }
 }
-
+/* 768px */
 @media screen and (max-width: 768px) {
 
     .section_item {
         flex-basis: 50%;
     }
 }
-
+/* 576px */
 @media screen and (max-width: 576px) {
     /* nav */
     #main_nav {
         width: 50px;
         padding: 0;
     }
+
     #nav_top,
+    #nav_center,
     #nav_bottom {
-    display: none;
+        display: none;
     }
     #nav_shrinked {
         display: flex;
     }
+    
     #content {
         width: calc(100% - 50px);
     }
     #upgrade {
         width: calc(100% - 50px);
     }
+
     #music_player_left,
     #music_player_right {
         width: 29%;
+    }
+    #controls i {
+        padding: 0 5px;
     }
 }
