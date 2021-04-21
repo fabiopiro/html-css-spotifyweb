@@ -27,13 +27,6 @@ body {
     text-decoration: underline;
 }
 
-.bar:hover .bar_overlay {
-    background-color: lime;
-}
-.bar:hover .bar_circle {
-    visibility: visible;
-}
-
 #controls i:hover {
     transform: scale(1.1);
 }
@@ -453,6 +446,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .bar {
     display: inline-block;
     width: 60%;
@@ -461,27 +455,40 @@ body {
     background-color: gray;
     position: relative;
 }
-.bar_overlay {
-    display: inline-block;
+
+.bar::after,
+.bar:hover::after {
+    content: "";
     width: 30%;
     height: 5px;
     border-radius: 5px;
-    background-color: lightgray;
     position: absolute;
     top: 0;
     left: 0;
 }
-.bar_circle {
-    display: inline-block;
+.bar::after {
+    background-color: lightgray;
+}
+.bar:hover::after {
+    background-color: lime;
+}
+
+.bar:hover::before {
+    content: "";
     height: 15px;
     width: 15px;
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    top: -90%;
-    right: 0%;
-    visibility: hidden;
+    top: -4.5px;
+    left: 25%;
+    z-index: 5;
 }
+
+.bar:hover .bar_overlay {
+    background-color: lime;
+}
+
 #controls_bar span {
     padding: 0 15px;
     font-size: 10px;
