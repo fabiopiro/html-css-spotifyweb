@@ -145,7 +145,7 @@ a {
     content: "";
     position: absolute;
     top: 50%;
-    left: 3px; 
+    left: 3px;
     transform: translate(-50% , -50%);
     height: 10px;
     height: 100%;
@@ -219,9 +219,12 @@ a {
 }
 #account {
     font-size: 14px;
-    color: white;
     margin-top: 15px;
     margin-bottom: 10px;
+}
+
+#account span {
+    color: white;
 }
 
 #download img {
@@ -302,8 +305,8 @@ a {
 #content_menu_list li:hover {
     cursor: pointer;
 }
-#content_menu_list li:nth-child(1) a,
-#content_menu_list li:hover a {
+#content_menu_list li:hover a,
+#content_menu_list li:nth-child(1) a {
     color: white;
 }
 
@@ -544,7 +547,7 @@ a {
     #nav_shrinked {
         display: flex;
     }
-    
+
     #main_content {
         width: calc(100% - 50px);
     }
@@ -566,7 +569,7 @@ a {
 /* EXTRA MEDIA QUERY */
 /* 450px */
 @media screen and (max-width: 450px) {
-    
+
     .section_item {
         flex-basis: 100%;
     }
