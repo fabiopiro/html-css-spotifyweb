@@ -33,38 +33,42 @@
                                 <img src="img/profile.svg" alt="">
                             </div>
                         </div>
+                        <!-- nav top -->
                         <div id="nav_top">
+                            <!-- nav logo -->
                             <div id="nav_logo">
                                 <img src="img/logo.svg" alt="">
                             </div>
+                            <!-- /nav logo -->
                             <!-- nav menu -->
-                            <section id="nav_menu">
+                            <div id="nav_menu">
                                 <ul id="nav_menu_list">
                                     <li>
-                                        <a href="">
-                                            <img src="img/home.svg" alt="">
+                                        <a href="#">
+                                            <img src="img/home.svg" alt="home">
                                             <span>Home</span>
-                                            <div class="green_bar_y"></div>
                                         </a> 
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <img src="img/search.svg" alt="">
+                                        <a href="#">
+                                            <img src="img/search.svg" alt="search">
                                             <span>Cerca</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <img src="img/libreria.svg" alt="">
+                                        <a href="#">
+                                            <img src="img/libreria.svg" alt="library">
                                             <span>La tua libreria</span>
                                         </a>
                                     </li>
                                 </ul>
-                            </section>
+                            </div>
+                            <!-- /nav menu -->
+                            <!-- nav playlist -->
                             <div id="nav_playlist">
                                 <span>playlist</span>
                                 <div id="create_playlist">
-                                    <a href="">
+                                    <a href="#">
                                         <div id="create_playlist_icon">
                                             <i class="fas fa-plus"></i>
                                         </div>
@@ -72,7 +76,10 @@
                                     </a>
                                 </div>
                             </div>
+                            <!-- /nav playlist -->
                         </div>
+                        <!-- /nav top -->
+                        <!-- nav center - playlist -->
                         <div id="nav_center">
                             <ul class="playlist_list">
                                 <li>Nome Playlist</li>
@@ -84,179 +91,188 @@
                                 <li>Nome Playlist</li>
                             </ul> 
                         </div>
+                        <!-- /nav center - playlist -->
+                        <!-- nav bottom -->
                         <div id="nav_bottom">
                             <div id="download">
-                                <img src="img/download.svg" alt="">
+                                <img src="img/download.svg" alt="download">
                                 <span>Installa App</span>
                             </div>
                             <hr>
                             <div id="account">
-                                <img src="img/profile.svg" alt="">
+                                <img src="img/profile.svg" alt="profile">
                                 <span>John Doe</span>
                             </div>
                         </div>
+                        <!-- /nav bottom -->
                     </nav>
-                    <div id="content">
+                    <div id="main_content">
                         <div id="upgrade">
-                            <a class="btn_upgrade" href="">effettua l'upgrade</a>
+                            <a class="btn_upgrade" href="#">effettua l'upgrade</a>
                         </div>
                         <!-- menu -->
                         <section id="content_menu">
                             <ul id="content_menu_list">
-                                <li><a>in evidenza</a><div class="green_bar_x"></div></li>
-                                <li><a>podcast</a></li>
-                                <li><a>classifiche</a></li>
-                                <li><a>generi e mood</a></li>
-                                <li><a>nuove uscite</a></li>
-                                <li><a>scopri</a></li>
+                                <li><a href="#">in evidenza</a></li>
+                                <li><a href="#">podcast</a></li>
+                                <li><a href="#">classifiche</a></li>
+                                <li><a href="#">generi e mood</a></li>
+                                <li><a href="#">nuove uscite</a></li>
+                                <li><a href="#">scopri</a></li>
                             </ul>
                         </section>
                         <!-- /menu -->
                         <!-- recently played -->
-                        <section id="recently_played">
+                        <section id="recently_played" class="section_container">
                             <div class="section_title">
                                 <h2>Recently played</h2>
                             </div>
-                            <div class="section_container">
+                            <!-- section item container -->
+                            <div class="section_item_container">
+                                <!-- item 1 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/metal_lifting.jpg" alt="">
-                                        </div>
+                                        <img src="img/metal_lifting.jpg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>Heavy Metal</p>
                                         <p>Subtitle</p>
                                     </div>
                                 </div>
+                                <!-- /item 1 -->
+                                <!-- item 2 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/stranger.jpeg" alt="">
-                                        </div>
+                                        <img src="img/stranger.jpeg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</p>
                                         <p>Kyle Dixon & Micheal Stein</p>
                                     </div>
                                 </div>
+                                <!-- /item 2 -->
+                                <!-- item 3 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/aquietplace.jpeg" alt="">
-                                        </div>
+                                        <img src="img/aquietplace.jpeg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>A quiet place</p>
                                         <p>Subtitle</p>
                                     </div>
                                 </div>
+                                <!-- /item 3 -->
+                                <!-- item 4 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/split.jpeg" alt="">
-                                        </div>
+                                        <img src="img/split.jpeg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>Split</p>
                                         <p>Subtitle</p>
                                     </div>
                                 </div>
+                                <!-- /item 4 -->
+                                <!-- item 5 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/cure.jpeg" alt="">
-                                        </div>
+                                        <img src="img/cure.jpeg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>A cure for wellness</p>
                                         <p>Subtitle</p>
                                     </div>
                                 </div>
+                                <!-- /item 5 -->
+                                <!-- item 6 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/sinister.jpeg" alt="">
-                                        </div>
+                                        <img src="img/sinister.jpeg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>Sinister</p>
                                         <p>Subtitle</p>
                                     </div>
                                 </div>
+                                <!-- item 6 -->
                             </div>
+                            <!-- /section item container -->
                         </section>
                         <!-- /recently played -->
                         <!-- create for -->
-                        <section id="create_for">
+                        <section id="create_for" class="section_container">
                             <div class="section_title">
                                 <h2>Creato per John Doe</h2>
                                 <p>Più ascolti, più saranno accurati i suggerimenti.</p>
                             </div>
-                            <div class="section_container">
+                            <!-- section item container -->
+                            <div class="section_item_container">
+                                <!-- item 1 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/radar.jpeg" alt="">
-                                        </div>
+                                        <img src="img/radar.jpeg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>Release Radar</p>
                                     </div>
                                 </div>
+                                <!-- /item 1 -->
+                                <!-- item 2 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/mixdaily.jpeg" alt="">
-                                        </div>
+                                        <img src="img/mixdaily.jpeg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>Daily Mix 1</p>
                                     </div>
                                 </div>
+                                <!-- /item 2 -->
                             </div>
+                            <!-- /section item container -->
                         </section>
                         <!-- /create for -->
-                        <!-- most popular artists -->
-                        <section id="most_popular">
+                        <!-- most popular -->
+                        <section id="most_popular" class="section_container">
                             <div class="section_title">
                                 <h2>Artisti più popolari</h2>
                                 <p>Più ascolti, più saranno accurati i suggerimenti.</p>
                             </div>
-                            <div class="section_container">
+                            <!-- section item container -->
+                            <div class="section_item_container">
+                                <!-- item 1 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/youg.jpeg" alt="">
-                                        </div>
+                                        <img src="img/youg.jpeg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>Lana Del Ray</p>
                                     </div>
                                 </div>
+                                <!-- /item 1 -->
+                                <!-- item 2 -->
                                 <div class="section_item">
-                                    <div class="item_image_overlay">
+                                    <div class="item_image_container">
                                         <i class="far fa-4x fa-play-circle"></i>
-                                        <div class="item_image_container">
-                                            <img src="img/einaudi.jpeg" alt="">
-                                        </div>
+                                        <img src="img/einaudi.jpeg" alt="">
                                     </div>
                                     <div class="item_title">
                                         <p>Ludovico Einaudi</p>
                                     </div>
                                 </div>
+                                <!-- /item 2 -->
                             </div>
+                            <!-- /section item container -->
                         </section>
-                        <!-- /most popular artists -->
+                        <!-- /most popular -->
                     </div>
                 </div>
                 <!-- /main wrapper -->
