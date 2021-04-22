@@ -44,10 +44,6 @@ a {
     background-color: white;
 }
 
-#song_title_and_artist span:hover {
-    text-decoration: underline;
-}
-
 /* nav */
 /* nav shrinked */
 #nav_shrinked {
@@ -422,9 +418,10 @@ a {
 #song_title_and_artist a:nth-child(2) {
     font-size: 10px;
 }
-#song_title_and_artist a:nth-child(2):hover {
-    color: gray;
+#song_title_and_artist a:hover {
+    text-decoration: underline;
 }
+
 /* song like and save */
 #song_like_and_save i {
     padding: 5px;
@@ -474,7 +471,6 @@ a {
     position: relative;
     margin: 0 5%;
 }
-
 .bar::after,
 .bar:hover::after {
     content: "";
@@ -489,7 +485,6 @@ a {
 .bar:hover::after {
     background-color: lime;
 }
-
 .bar:hover::before {
     content: "";
     height: 15px;
