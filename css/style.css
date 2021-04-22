@@ -5,10 +5,16 @@
     margin: 0;
     padding: 0;
 }
+
 /* font */
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    color: gray;
+}
+
+a {
+    text-decoration: none;
     color: gray;
 }
 
@@ -26,9 +32,9 @@ body {
 
 /* hover */
 #create_playlist:hover a,
-.playlist_list li:hover,
-#nav_bottom #download:hover span,
-#song_title_and_artist span:hover,
+.playlist_list li a:hover,
+#nav_bottom a:hover,
+#song_title_and_artist a:hover,
 #song_like_and_save a i:hover {
     color: white;
     cursor: pointer;
@@ -40,10 +46,6 @@ body {
 
 #song_title_and_artist span:hover {
     text-decoration: underline;
-}
-
-#controls i:hover {
-    transform: scale(1.1);
 }
 
 /* nav */
@@ -66,15 +68,22 @@ body {
     width: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
+    opacity: 0.8;
 }
-#nav_shrinked_down img:first-child {
+#nav_shrinked a:hover img {
+    opacity: 1;
+}
+
+/* nav_shrinked_down */
+#nav_shrinked_down a:first-child img {
     height: 15px;
 }
-#nav_shrinked_down img:nth-child(2) {
+#nav_shrinked_down a:nth-child(2) img {
     background-color: gray;
     border-radius: 50%;
 }
-/* /nav shrinked */
+
+/* main nav */
 #main_nav {
     width: 230px;
     background-color: black;
@@ -93,6 +102,7 @@ body {
 
 #nav_logo {
     display: flex;
+    align-items: center;
     height: 90px;
 }
 #nav_logo img {
@@ -111,7 +121,6 @@ body {
 #nav_menu_list a {
     display: flex;
     align-items: center;
-    text-decoration: none;
     font-size: 12px;
     color: gray;
 }
@@ -160,7 +169,6 @@ body {
     display: flex;
     align-items: center;
     font-size: 13px;
-    text-decoration: none;
     color: gray;
 }
 
@@ -188,6 +196,7 @@ body {
 .playlist_list li {
     padding-bottom: 20px;
 }
+
 /* nav center */
 #nav_center {
     overflow-y: auto;
@@ -198,8 +207,8 @@ body {
     width: 100%;
 }
 
-#download,
-#account {
+#download a,
+#account a {
     display: flex;
     align-items: center;
 }
@@ -249,7 +258,6 @@ body {
 .btn_upgrade {
     font-size: 12px;
     text-transform: uppercase;
-    text-decoration: none;
     color: white;
     padding: 12px 40px;
     border: 1px solid white;
@@ -277,7 +285,6 @@ body {
 #content_menu_list a {
     font-size: 13px;
     text-transform: uppercase;
-    text-decoration: none;
     color: gray;
 }
 
@@ -405,12 +412,15 @@ body {
     display: block;
     margin-left: 10px;
 }
-#song_title_and_artist span:first-child {
+#song_title_and_artist a:first-child {
     font-size: 12px;
     color: white;
 }
-#song_title_and_artist span:nth-child(2) {
+#song_title_and_artist a:nth-child(2) {
     font-size: 10px;
+}
+#song_title_and_artist a:nth-child(2):hover {
+    color: gray;
 }
 /* song like and save */
 #song_like_and_save i {
@@ -435,7 +445,9 @@ body {
 #controls i {
     padding: 0 12px;
 }
-
+#controls i:hover {
+    transform: scale(1.2);
+}
 /* controls_bar */
 #controls_bar {
     height: 25px;
