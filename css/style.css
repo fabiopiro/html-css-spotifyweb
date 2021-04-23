@@ -361,6 +361,7 @@ a {
 
 .section_item:hover .item_image_container img {
     opacity: 0.5;
+    cursor: pointer;
 }
 .section_item:hover .fa-4x.fa-play-circle {
     visibility: visible;
